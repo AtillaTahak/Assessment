@@ -1,11 +1,13 @@
 import React from 'react'
+import { Todo } from './styled/app.styled'
+
 
 function TodosList(props) {
     
     return (
-        <div>
+        <Todo>
             {props.data.title}
-        </div>
+        </Todo>
     )
 }
 
