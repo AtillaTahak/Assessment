@@ -1,9 +1,10 @@
 import React from 'react'
 
-function TodosList() {
+function TodosList(props) {
+    
     return (
         <div>
-            
+            {props.data.title}
         </div>
     )
 }
