@@ -5,7 +5,7 @@ import { Todo } from './styled/app.styled'
 function TodosList(props) {
     
     return (
-        <Todo>
+        <Todo key={props.data._id} >
             {props.data.title}
         </Todo>
     )

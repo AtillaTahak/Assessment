@@ -1,4 +1,4 @@
-import { cleanup, getByDisplayValue, getByRole, getByText, debug,render as rtlRender, screen } from '@testing-library/react';
+import { render as rtlRender, screen } from '@testing-library/react';
 import InputTodo from '../components/InputTodo';
 import '@testing-library/jest-dom/extend-expect'
 import userEvent from '@testing-library/user-event'
@@ -20,14 +20,6 @@ test('Input To do list render correctly',()=>{
     userEvent.click(addInput);
     const error = screen.getByTestId('error');
     expect(error).toBeInTheDocument();
-    expect(error).toMatchInlineSnapshot(`
-<span
-  data-testid="error"
->
-  you have to write stuff to do
-   
-</span>
-`);
 
     debug();
 

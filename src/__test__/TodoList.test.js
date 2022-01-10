@@ -1,7 +1,6 @@
-import { cleanup, getByDisplayValue, getByRole, getByText, render as rtlRender, screen } from '@testing-library/react';
+import { render as rtlRender, screen } from '@testing-library/react';
 import TodosList from '../components/TodosList';
 import '@testing-library/jest-dom/extend-expect'
-import userEvent from '@testing-library/user-event'
 import { Provider } from 'react-redux'
 import store from '../redux/configureStore'
 

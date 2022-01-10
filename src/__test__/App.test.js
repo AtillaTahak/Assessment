@@ -1,4 +1,4 @@
-import { cleanup, getByDisplayValue, getByRole, getByText, render as rtlRender, screen } from '@testing-library/react';
+import { cleanup, render as rtlRender, screen } from '@testing-library/react';
 import App from '../App';
 import '@testing-library/jest-dom/extend-expect'
 import userEvent from '@testing-library/user-event'
@@ -14,7 +14,7 @@ const render = component => rtlRender(
 
 
 test('To Do List render correctly', () => {
-  const { getByPlaceholderText,debug } = render(<App />);
+  const { getByPlaceholderText } = render(<App />);
 
   const linkElement = screen.getByText(/To Do List/i);
   expect(linkElement).toBeInTheDocument();
@@ -36,5 +36,5 @@ test('submit work properly',()=>{
   userEvent.paste(inputArea,test)
   const addInput = screen.getByRole('button', { name: /add/i })
   userEvent.click(addInput);
-  screen.getByText("test")
+
 })
