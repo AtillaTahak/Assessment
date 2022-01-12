@@ -13,6 +13,7 @@
   "author": "Atilla Taha kördüğüm",
   "license": "ISC",
   "dependencies": {
+    "@pact-foundation/pact": "^9.17.1",
     "body-parser": "^1.19.1",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",

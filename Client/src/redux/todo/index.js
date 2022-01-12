@@ -1,13 +1,16 @@
 import {createSlice, createAsyncThunk} from '@reduxjs/toolkit';
 
-export const todoAction = createAsyncThunk('todo/todo', async ()=>{
-    const req = await fetch('http://localhost:5001/posts/');
+const defaultBaseUrl = 'http://localhost:5001/posts/';
+
+export const todoAction = createAsyncThunk('todo/todo', async (baseUrl = defaultBaseUrl)=>{
+    const req = await fetch(baseUrl);
     const todojson = req.json();
     return todojson;
 })
 
 export const todoPost = createAsyncThunk("todo/todoPost", async(getTitle)=>{
-    const todoPosting = await fetch('http://localhost:5001/posts/',{
+   
+    const todoPosting = await fetch(defaultBaseUrl,{
         method: 'POST',
         headers:{
             Accept:'application/json',
