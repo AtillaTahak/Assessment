@@ -2,9 +2,6 @@ version: 0.2
 
 phases:
   install:
-    runtime-version:
-      nodejs:12
-  pre_build:
     commands:
       - echo install first server
       - cd server
@@ -13,7 +10,6 @@ phases:
       - cd client
       - npm install
       - cd ..
-
   build:
     commands:
       - echo Running test
