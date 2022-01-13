@@ -5,10 +5,6 @@
 > This project purpose exercise 
 > I used to devops, kubernetes, react, redux, reduxtoolkit, pact, jest-pact, jest, 
 
-# Demo Link
-[Click here](http://13.57.246.185:3000)
-# Server Demo Link
-[Click here](http://13.57.246.185:5001/posts/)
 
 
 # Screenshot

@@ -1,6 +1,6 @@
 FROM node:14-alpine
 
-LABEL version ="2.0"
+LABEL version ="3.0"
 LABEL description ="Developemnt image dor the assessment"
 
 WORKDIR /client

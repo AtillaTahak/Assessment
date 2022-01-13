@@ -1,6 +1,6 @@
 import {createSlice, createAsyncThunk} from '@reduxjs/toolkit';
 
-const defaultBaseUrl = 'http://13.57.246.185:5001/posts/';
+const defaultBaseUrl = 'http://0.0.0.0:5001/posts/';
 
 export const todoAction = createAsyncThunk('todo/todo', async (baseUrl = defaultBaseUrl)=>{
     const req = await fetch(baseUrl);
