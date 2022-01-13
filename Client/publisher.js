@@ -13,7 +13,8 @@ const branch =  exec("git rev-parse --abbrev-ref HEAD || echo LOCAL_DEV")
 
 const opts = {
   pactFilesOrDirs: [path.resolve(process.cwd(), "./contracts/")],
-  pactBroker: "http://localhost:5001/posts/",
+  pactBroker: "https://atilla.pactflow.io",
+  pactBrokerToken: "8WzFv0K-LXdVCggeYhgllA",
   consumerVersion: gitSha,
   tags: [branch],
 }
@@ -21,7 +22,7 @@ const opts = {
 new Publisher(opts)
   .publishPacts()
   .then(() => {
-    console.log(`You can see contract http://localhost:5001/posts/`)
+    console.log(`You can see contract https://atilla.pactflow.io`)
   })
   .catch(e => {
     console.log(e.message)

@@ -26,6 +26,6 @@ spec:
         spec:
             containers:
                 -   name: server
-                    image: atillataha/server:v1
+                    image: atillataha/server:v2
                     ports:
                         - containerPort: 5001

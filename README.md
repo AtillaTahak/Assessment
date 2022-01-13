@@ -3,7 +3,9 @@
 > This is a React and Redux based single page application about Todo list.  
 # How To Use It
 > This project purpose exercise 
-> I used to devops, kubernetes, react, redux, reduxtoolkit, pact, jest-pact, jest, 
+> File Server, coded with Nodejs for backend
+> File Client, coded with React for frontend
+
 
 # Demo Link
 [Click here](http://13.57.246.185:3000)
@@ -22,22 +24,28 @@ To get a local copy up and running follow these simple steps.
 - You can clone this repo by typing `git clone https://github.com/AtillaTahak/Assessment.git` on your terminal.
 
 - Type `cd Assessment` to access the project on the terminal.
+  
 
-- Type `cd Client` to access the project on the terminal.
+# This project was tested with:
 
-- Run `npm install` from your editor's terminal.
+Pact.io
 
-- Run `npm run build` from your editor's terminal.
+Jest
 
-- Run `npm run start` from your editor's terminal to view the project in your browser.
+Taiko
 
-- Run `npx stylelint "**/*.{css,scss}"` to check for CSS Linter errors.
+Jest-Pact
 
-- Run `npm test:publish` to check for Contract
+# Those test purpuse:
 
-- Run `npm test` to check for Component and Unit
+Acceptance Test
 
-- Run `npx taiko test.js` to check for Acceptance
+Component Test
+
+Unit Test
+
+Contract Test
+
 
 
 # This project was built with:

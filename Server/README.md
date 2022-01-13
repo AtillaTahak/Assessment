@@ -1,9 +1,10 @@
 # To-Do Api
 
-> This is a React and Redux based single page application about Todo list.  
+> This is a Nodejs and Express based server application about Todo list.  
 # How To Use It
 > This project purpose exercise 
-> I used to devops, kubernetes, react, redux, reduxtoolkit, pact, jest-pact, jest, 
+> I used to  nodejs,express
+
 
 # Demo Link
 [Click here](http://13.57.246.185:3000)
@@ -23,21 +24,19 @@ To get a local copy up and running follow these simple steps.
 
 - Type `cd Assessment` to access the project on the terminal.
 
-- Type `cd Client` to access the project on the terminal.
-
+- Type `cd Server` to access the project on the terminal.
+  
 - Run `npm install` from your editor's terminal.
 
 - Run `npm run build` from your editor's terminal.
 
 - Run `npm run start` from your editor's terminal to view the project in your browser.
 
-- Run `npx stylelint "**/*.{css,scss}"` to check for CSS Linter errors.
+- Run `npm test` Test for Acceptance test
 
-- Run `npm test:publish` to check for Contract
+- Run `test:provider` Test for Contract test
 
-- Run `npm test` to check for Component and Unit
 
-- Run `npx taiko test.js` to check for Acceptance
 
 
 # This project was built with:
