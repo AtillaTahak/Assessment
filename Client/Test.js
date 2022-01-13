@@ -3,7 +3,7 @@ const { openBrowser, goto, textBox, focus, write, click, closeBrowser } = requir
 (async () => {
     try {
         await openBrowser();
-        await goto("http://localhost:3000");
+        await goto("http://13.57.246.185:3000");
         isTitleExists = await text(/To do List/i).exists()
         if(!isTitleExists){
             process.exit(1);

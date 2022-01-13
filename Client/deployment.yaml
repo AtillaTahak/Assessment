@@ -27,6 +27,6 @@ spec:
         spec:
             containers:
                 -   name: client
-                    image: atillataha/client:v1
+                    image: atillataha/client:v2
                     ports:
                         - containerPort: 3000

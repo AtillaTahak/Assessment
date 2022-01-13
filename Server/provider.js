@@ -2,7 +2,7 @@ const { Verifier } = require('@pact-foundation/pact');
 
 return new Verifier().verifyProvider({
   provider: 'server',
-  providerBaseUrl: 'http://localhost:5001/posts/',
+  providerBaseUrl: 'http://13.57.246.185:3000',
 
   pactBrokerUrl: 'https://atilla.pactflow.io',
   pactBrokerToken: '8WzFv0K-LXdVCggeYhgllA',
