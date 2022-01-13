@@ -1,0 +1,11 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo installing
+      - npm install
+  build:
+    commands:
+      - echo Running test
+      - npm test
