@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const bodyParser =require('body-parser');
 const cors=require("cors");
 
-
+const host = '0.0.0.0';
 
 require('dotenv/config');
 
@@ -34,8 +34,8 @@ mongoose.connect(
 
 const PORT = process.env.PORT || 5001
 if(process.env.NODE_ENV !=='test'){
-    app.listen(PORT,()=>{
-        console.log(`server runing port:${PORT}`)
+    app.listen(PORT,host,()=>{
+        console.log(`server runing on http://${host}:${PORT}`);
     });
 }
 module.exports = app

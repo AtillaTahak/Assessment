@@ -6,11 +6,6 @@
 > I used to  nodejs,express
 
 
-# Demo Link
-[Click here](http://13.57.246.185:3000)
-# Server Demo Link
-[Click here](http://13.57.246.185:5001/posts/)
-
 
 # Screenshot
 
