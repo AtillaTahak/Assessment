@@ -3,9 +3,24 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo installing
+      - echo install first server
       - npm install
   build:
     commands:
       - echo Running test
       - npm test
+      - npm run test:provider
+      - echo Building and taggin Docker image
+      - aws ecr get-login-password --region eu-central-1 | docker login --username AWS --password-stdin 866370255777.dkr.ecr.eu-central-1.amazonaws.com
+      - docker build -t node-api .
+      - docker tag node-api:latest 866370255777.dkr.ecr.eu-central-1.amazonaws.com/node-api:latest
+  post_build:
+    commands:
+      - echo Pushing to ECR
+      - docker push 866370255777.dkr.ecr.eu-central-1.amazonaws.com/node-api:latest
+      - printf '[{"name":"node-api","imageUri":"866370255777.dkr.ecr.eu-central-1.amazonaws.com/node-api:latest"}]' > imagedefinitions.json
+artifacts:
+  files:
+   - imagedefinitions.json
+  
+
