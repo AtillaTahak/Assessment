@@ -5,22 +5,30 @@ version: 2.1
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/2.0/configuration-reference/#jobs
 jobs:
-  say-hello:
+  build_deploy:
     # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
     # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
-    docker:
-      - image: cimg/base:stable
+    machine:
+      - image: ubuntu-2004:202010-01
     # Add steps to the job
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
     steps:
       - checkout
       - run:
-          name: "Say hello"
-          command: "echo Hello, World!"
+          name: installing AWS CLI
+          command:
+           sudo apt-get update
+           sudo apt-get python3-pip
+           sudo pip3 install awsebcli --upgrade
+      - run: cd ./Server && npm install && npm start
+      - run: aws s3 sync ./Server s3://node-api-ci
+
+
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
-  say-hello-workflow:
+  version:1
+  execute_bulk:
     jobs:
-      - say-hello
+      - build_deploy
