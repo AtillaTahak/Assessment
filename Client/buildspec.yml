@@ -1,0 +1,27 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo install first server
+      - curl -sL https://deb.nodesource.com/setup_12.x | bash -
+      - apt install -y nodejs
+  pre_build:
+    commands:
+      - echo installing
+      - npm install
+  build:
+    commands:
+      - echo testing
+      - npm test
+      - echo building
+      - npm run build
+artifacts:
+  files:
+    - "**/*"
+  discard-paths: no
+  base-directory: build
+
+
+  
+
