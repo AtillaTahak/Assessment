@@ -6,11 +6,6 @@
 > File Server, coded with Nodejs for backend
 > File Client, coded with React for frontend
 
-# Demo Link
-[Click here](http://todoclient1.s3.eu-central-1.amazonaws.com/index.html)
-# Server Demo Link
-[Click here](http://18.194.208.137/posts/)
-
 
 # Screenshot
 
